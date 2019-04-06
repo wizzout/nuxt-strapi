@@ -96,6 +96,7 @@ export default {
           `
       }
     });
+    response && response.data && response.data.restaurant && response.data.restaurant.dishes &&
     response.data.restaurant.dishes.forEach(dish => {
       dish.image.url = `${apiUrl}${dish.image.url}`;
       store.commit("dishes/add", {
